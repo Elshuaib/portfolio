@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Shuaibu | Web and Mobile Developer</title>
+    <meta name="description" content="Premium portfolio of Muhammad Shuaibu, Web Developer and UI/UX Specialist">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("7kjV6MvlUXfP1K7G4"); // replace with your real public key
+      })();
+    </script>
+    
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Muhammad<span>Shuaibu</span><span class="dot"></span></a>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Digital Craftsmanship <span>Perfected</span></h1>
+                    <p>I'm Muhammad Shuaibu, a Web and Mobile Developer specializing in creating high-performance
+                        digital experiences with cutting-edge technologies.</p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View Portfolio</a>
+                        <a href="https://wa.me/2349033547608?text=" class="btn btn-outline">Let's Talk</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Muhammad Shuaibu">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Expertise</h2>
+            <p class="section-subtitle">A refined skillset honed through years of professional experience</p>
+
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Engineering</h3>
+                    <div class="skill-items">
+                        <span class="skill-item"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                        <span class="skill-item"><i class="fab fa-js"></i> TypeScript</span>
+                        <span class="skill-item"><i class="fa-solid fa-file-code"></i> HTML</span>
+                        <span class="skill-item"><i class="fas fa-mobile-alt"></i> Responsive</span>
+                        <span class="skill-item"><i class="fas fa-tachometer-alt"></i> Performance</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-server"></i> Backend Architecture</h3>
+                    <div class="skill-items">
+                        <span class="skill-item"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> SQL/NoSQL</span>
+                        <span class="skill-item"><i class="fas fa-cloud"></i> Firebase</span>
+                        <span class="skill-item"><i class="fas fa-shield-alt"></i> Security</span>
+                        <span class="skill-item"><i class="fas fa-bolt"></i> APIs</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3><i class="fas fa-tools"></i> Development Ecosystem</h3>
+                    <div class="skill-items">
+                        <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-item"><i class="fas fa-tasks"></i> Agile</span>
+                        <span class="skill-item"><i class="fas fa-tasks"></i> Clean Architecture</span>
+                        <span class="skill-item"><i class="fas fa-paint-brush"></i> UI/UX</span>
+                        <span class="skill-item"><i class="fas fa-search"></i> Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Selected Works</h2>
+            <p class="section-subtitle">A curated collection of my most impactful projects</p>
+
+            <div class="projects-filter">
+                <button class="btn btn-text active" data-filter="all">All</button>
+                <button class="btn btn-text" data-filter="web">Web Apps</button>
+                <button class="btn btn-text" data-filter="mobile">Mobile</button>
+                <button class="btn btn-text" data-filter="enterprise">Enterprise</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="web enterprise">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="E-commerce Platform">
+                        <span class="project-badge">Enterprise</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>DevNestor</h3>
+                        <p>A website for an IT solutions and Web Development Company</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-text"><i class="fas fa-external-link-alt"></i> Live
+                                Demo</a>
+                            <a href="#" target="_blank" class="btn-text"><i class="fab fa-github"></i> Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile enterprise">
+                    <div class="project-img">
+                        <img
+                            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80">
+                        <span class="project-badge">Mobile</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Chore App Redesign</h3>
+                        <p>A complete overhaul of mobile chore app with gamification for increased user interaction.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Figma</span>
+                        </div>
+                        <div class="project-links">
+                            <!-- <a href="#" target="_blank" class="btn-text"><i class="fab fa-app-store"></i> App Store</a> -->
+                            <a href="#" target="_blank" class="btn-text"><i class="fas fa-book"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                            alt="Task Management App">
+                    </div>
+                    <div class="project-info">
+                        <h3>Cashbridge MFB website</h3>
+                        <p>A comprehensive task management system with team collaboration features and real-time
+                            synchronization.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-text"><i class="fas fa-external-link-alt"></i> Live
+                                Demo</a>
+                            <a href="#" target="_blank" class="btn-text"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                            alt="Task Management App">
+                    </div>
+                    <div class="project-info">
+                        <h3>CyReport</h3>
+                        <p>An Android Application that unanimously reports cybercrimes to multiple law enforcement agencies in Nigeria </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>XML</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="btn-text"><i class="fas fa-external-link-alt"></i> Live
+                                Demo</a>
+                            <a href="#" target="_blank" class="btn-text"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-subtitle">From concept to execution with precision and passion</p>
+
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="me.png" alt="Muhammad Shuaibu" class="about-img-main">
+                    <div class="about-img-shape"></div>
+                </div>
+                <div class="about-text">
+                    <h2>Crafting Digital Excellence</h2>
+                    <p>With over 4 years of experience in Web and Mobile App development, I've refined my approach to
+                        blend technical precision with creative vision. My journey began in computer science and evolved
+                        through various roles in different teams and start-ups</p>
+                    <p>I specialize in developing websites and mobile Apps that balance performance and maintainability
+                        while delivering exceptional user experiences. Transform your digital presence with me. Get in
+                        touch to discuss and bring your vision to life.</p>
+
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <strong>Education:</strong>
+                            <span>B.Tech. Cyber Security Science, <br>Federal University of Technology, Minna</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Experience:</strong>
+                            <span>4+ Years</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Clients:</strong>
+                            <span>13 Satisfied Organizations</span>
+                        </div>
+                        <!-- <div class="detail-item">
+                            <strong>Awards:</strong>
+                            <span>5 Industry Recognitions</span>
+                        </div> -->
+                    </div>
+
+                    <div style="margin-top: var(--spacing-xl); display: flex; gap: var(--spacing-md);">
+                        <a href="docs/my-CV.pdf" download class="btn">Download CV</a>
+                        <a href="#" class="btn btn-outline">View Certifications</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Collaborate With Me</h2>
+            <p class="section-subtitle">Let's discuss how we can create something remarkable together</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Nigeria</p>
+                            <p>Available for remote work worldwide</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:Muhammadshuaibu03@gmail.com">muhammedshuaibu03@gmail.com</a>
+                            <p>Response within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Availability</h3>
+                            <p>Currently accepting new projects</p>
+                            <a href="#">Book a consultation →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Project Type</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="web">Web Application</option>
+                                <option value="mobile">Mobile Application</option>
+                                <option value="consulting">Technical Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" class="form-control" required
+                                placeholder="Tell me about your project goals, timeline, and budget..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">
+                            <span class="btn-text">Send Proposal Request</span>
+                            <i class="fas fa-arrow-right" style="margin-left: var(--spacing-sm);"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo"
+                    style="margin-bottom: var(--spacing-lg); color: var(--on-primary);">Muhammad<span>Shuaibu</span><span
+                        class="dot"></span></a>
+
+                <div class="footer-links">
+                    <a href="#skills">Expertise</a>
+                    <a href="#projects">Work</a>
+                    <a href="#about">Journey</a>
+                    <a href="#contact">Connect</a>
+                </div>
+
+                <div class="social-links">
+                    <!-- <a href="#" class="social-link" target="_blank"><i class="fab fa-dribbble"></i></a> -->
+                    <a href="https://github.com/Elshuaib" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/shuaibu-m-59028599" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                </div>
+
+                <p class="footer-text">Crafting digital excellence since 2019</p>
+                <p class="footer-text">&copy; 2023 Muhammad Shuaibu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#hero" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
