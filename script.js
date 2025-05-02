@@ -33,6 +33,25 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// WhatsApp button
+document.addEventListener('DOMContentLoaded', function () {
+    // Find the button
+    const whatsappButton = document.getElementById('whatsapp-button');
+
+    // Listen for clicks on the button
+    whatsappButton.addEventListener('click', function () {
+        // WhatsApp URL with a default message
+        const phoneNumber = '2349033547608';
+        const message = 'Hi Muhammad, I found your portfolio online.';
+
+        
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp link in a new tab
+        window.open(whatsappURL, '_blank');
+    });
+});
+
 // Project Filtering
 const filterBtns = document.querySelectorAll('.projects-filter .btn-text');
 const projectCards = document.querySelectorAll('.project-card');
