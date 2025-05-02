@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         // Open WhatsApp link in a new tab
-        windows.location.href = whatsappURL;
+        window.open(whatsappURL, '_blank');
     });
 });
 
