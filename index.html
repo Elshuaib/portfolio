@@ -4,19 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Shuaibu | Digital Craftsman</title>
-    <meta name="description" content="Premium portfolio of Muhammad Shuaibu, Frontend & Mobile App Developer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link href="[https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap](https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap)" rel="stylesheet">
+    
+    <style>
+        /* =========================================
+           FUTURISTIC GLASSMORPHISM VARIABLES
+           ========================================= */
+        :root {
+            --bg-dark: #030305;
+            --neon-cyan: #00f0ff;
+            --neon-purple: #b026ff;
+            --text-main: #f0f0f5;
+            --text-muted: #8e8e9f;
+            
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-highlight: rgba(255, 255, 255, 0.15);
+            
+            --blur-intense: blur(24px);
+            --blur-soft: blur(12px);
+            
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'Outfit', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .ambient-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            pointer-events: none;
+            transition: all 0.5s ease;
+        }
+
+        .orb-1 {
+            width: 50vw; height: 50vw;
+            background: radial-gradient(circle, var(--neon-purple) 0%, transparent 70%);
+            top: -10%; right: -10%;
+            opacity: 0.15;
+        }
+
+        .orb-2 {
+            width: 40vw; height: 40vw;
+            background: radial-gradient(circle, var(--neon-cyan) 0%, transparent 70%);
+            bottom: -10%; left: -10%;
+            opacity: 0.15;
+        }
+
+        h1, h2, h3 { font-family: var(--font-display); font-weight: 700; }
+        a { text-decoration: none; color: var(--neon-cyan); transition: 0.3s; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 120px 0; }
+
+        .section-heading {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-nav {
+            position: fixed;
+            top: 20px; left: 50%;
+            transform: translateX(-50%);
+            width: 90%; max-width: 700px;
+            background: var(--glass-bg);
+            backdrop-filter: var(--blur-intense);
+            -webkit-backdrop-filter: var(--blur-intense);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-main); font-size: 0.9rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px rgba(0,240,255,0.5); }
+        .nav-btn { cursor: pointer; font-size: 0.9rem; padding: 8px 16px; background: rgba(0,240,255,0.1); border: 1px solid var(--neon-cyan); border-radius: 30px; color: var(--neon-cyan); }
+        .nav-btn:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 15px var(--neon-cyan); }
+
+        .hero { display: flex; justify-content: center; align-items: center; min-height: 100vh; padding-top: 80px; }
+        .hero-glass-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            backdrop-filter: var(--blur-intense);
+            -webkit-backdrop-filter: var(--blur-intense);
+            border: 1px solid var(--glass-border);
+            border-top: 1px solid var(--glass-highlight);
+            border-left: 1px solid var(--glass-highlight);
+            border-radius: 30px;
+            padding: 60px;
+            text-align: center;
+            max-width: 800px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transform-style: preserve-3d;
+        }
+
+        .hero-badge { display: inline-block; padding: 5px 15px; background: rgba(176,38,255,0.1); border: 1px solid var(--neon-purple); border-radius: 20px; font-size: 0.8rem; margin-bottom: 20px; color: var(--neon-purple); letter-spacing: 1px; }
+        .hero-glass-card h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; transform: translateZ(30px); }
+        .hero-glass-card h1 span { color: var(--neon-cyan); text-shadow: 0 0 20px rgba(0,240,255,0.3); }
+        .hero-glass-card p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 40px; transform: translateZ(20px); }
+
+        .hero-actions { display: flex; justify-content: center; align-items: center; gap: 20px; transform: translateZ(40px); }
+        .btn-primary { padding: 12px 30px; background: var(--neon-cyan); color: #000; font-family: var(--font-display); font-weight: 700; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 0 15px rgba(0,240,255,0.4); transition: 0.3s; }
+        .btn-primary:hover { box-shadow: 0 0 25px rgba(0,240,255,0.7); transform: translateY(-2px); }
+        .social-dock { display: flex; gap: 15px; }
+        .social-dock a { display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 50%; color: var(--text-main); font-size: 1.2rem; }
+        .social-dock a:hover { background: var(--neon-purple); border-color: var(--neon-purple); box-shadow: 0 0 15px var(--neon-purple); color: #fff; }
+
+        .bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(150px, auto); gap: 20px; }
+        .glass-box { background: var(--glass-bg); backdrop-filter: var(--blur-soft); -webkit-backdrop-filter: var(--blur-soft); border: 1px solid var(--glass-border); border-radius: 24px; padding: 30px; transition: all 0.4s ease; }
+        .glass-box:hover { background: rgba(255,255,255,0.04); border-color: var(--glass-highlight); }
+        .box-icon { font-size: 2rem; margin-bottom: 15px; color: var(--neon-purple); }
+
+        .bento-about { grid-column: span 2; grid-row: span 2; }
+        .bento-about h3 { font-size: 1.8rem; margin-bottom: 15px; }
+        .bento-about p { color: var(--text-muted); margin-bottom: 20px; }
+
+        .bento-stats { grid-column: span 2; display: flex; align-items: center; justify-content: space-around; background: linear-gradient(135deg, rgba(0,240,255,0.05), rgba(176,38,255,0.05)); }
+        .stat { text-align: center; }
+        .stat-num { display: block; font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--neon-cyan); text-shadow: 0 0 15px rgba(0,240,255,0.3); }
+        .stat-label { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+
+        .bento-mobile { grid-column: span 1; grid-row: span 1; }
+        .bento-frontend { grid-column: span 1; grid-row: span 1; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tech-tags span { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; }
+
+        .projects-wrapper { display: flex; flex-direction: column; gap: 80px; }
+        .glass-project-card { display: flex; align-items: center; gap: 40px; background: var(--glass-bg); backdrop-filter: var(--blur-soft); -webkit-backdrop-filter: var(--blur-soft); border: 1px solid var(--glass-border); border-radius: 30px; padding: 30px; transition: 0.4s; }
+        .glass-project-card:hover { border-color: rgba(0,240,255,0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+        .glass-project-card.reverse { flex-direction: row-reverse; }
+
+        .project-content { flex: 1; padding: 20px; }
+        .project-type { color: var(--neon-cyan); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+        .project-content h3 { font-size: 2.5rem; margin-bottom: 15px; }
+        .project-content p { color: var(--text-muted); margin-bottom: 25px; }
+        .btn-text { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; margin-top: 20px; border-bottom: 1px solid transparent; }
+        .btn-text:hover { border-bottom-color: var(--neon-cyan); }
+
+        .project-image { flex: 1.2; border-radius: 20px; overflow: hidden; position: relative; border: 1px solid var(--glass-border); }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; filter: grayscale(50%) brightness(0.8); }
+        .glass-project-card:hover .project-image img { transform: scale(1.05); filter: grayscale(0%) brightness(1); }
+
+        .contact-wrapper { display: flex; gap: 50px; background: linear-gradient(to right, rgba(255,255,255,0.02), rgba(0,240,255,0.02)); }
+        .contact-info { flex: 1; }
+        .direct-contact { margin-top: 30px; display: flex; flex-direction: column; gap: 15px; }
+        .direct-contact a, .direct-contact p { color: var(--text-main); font-size: 1.1rem; }
+        .direct-contact i { color: var(--neon-cyan); width: 30px; }
+
+        .glass-form { flex: 1; display: flex; flex-direction: column; gap: 20px; }
+        .input-group { display: flex; gap: 20px; }
+        input, select, textarea { width: 100%; background: rgba(0,0,0,0.3); border: 1px solid var(--glass-border); border-radius: 12px; padding: 15px; color: #fff; font-family: var(--font-body); outline: none; transition: 0.3s; }
+        input:focus, select:focus, textarea:focus { border-color: var(--neon-purple); box-shadow: 0 0 15px rgba(176,38,255,0.2); background: rgba(0,0,0,0.5); }
+        select option { background: var(--bg-dark); }
+        textarea { resize: vertical; min-height: 150px; }
+
+        .glass-footer { text-align: center; padding: 40px; border-top: 1px solid var(--glass-border); color: var(--text-muted); font-size: 0.9rem; }
+
+        .reveal-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal-up.active { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 992px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-about { grid-column: span 2; }
+            .glass-project-card, .glass-project-card.reverse { flex-direction: column; }
+            .contact-wrapper { flex-direction: column; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-glass-card { padding: 30px; }
+            .hero-glass-card h1 { font-size: 3rem; }
+            .nav-links { display: none; }
+            .glass-nav { justify-content: space-between; }
+            .input-group { flex-direction: column; }
+        }
+    </style>
 </head>
 <body>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() { emailjs.init("7kjV6MvlUXfP1K7G4"); })();
-    </script>
-
     <div class="ambient-orb orb-1"></div>
     <div class="ambient-orb orb-2"></div>
 
@@ -37,11 +222,7 @@
                 <h1 class="glitch-text" data-text="Frontend & Mobile Engineer.">Frontend & Mobile<br><span>Engineer.</span></h1>
                 <p>I am Muhammad Shuaibu. I build high-performance mobile apps and responsive web interfaces using cutting-edge technologies.</p>
                 <div class="hero-actions">
-                    <a href="#work" class="btn-primary">Explore My Work <i class="fas fa-arrow-down"></i></a>
-                    <div class="social-dock">
-                        <a href="https://github.com/Elshuaib" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/shuaibu-m-59028599" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <a href="#work" class="btn-primary">Explore My Work</a>
                 </div>
             </div>
         </section>
@@ -49,46 +230,24 @@
         <section id="about" class="section">
             <h2 class="section-heading">The Architect</h2>
             <div class="bento-grid">
-                
                 <div class="glass-box bento-about tilt-card">
                     <i class="fas fa-fingerprint box-icon"></i>
                     <h3>Crafting Digital Excellence</h3>
-                    <p>With over 4 years of experience, my journey began in computer science and evolved through various start-ups. I blend technical precision with creative vision, balancing performance and exceptional UX.</p>
-                    <a href="docs/my-CV.pdf" download class="btn-text">Download CV <i class="fas fa-download"></i></a>
+                    <p>With over 4 years of experience, my journey began in computer science and evolved through various start-ups. I blend technical precision with creative vision.</p>
                 </div>
-
                 <div class="glass-box bento-stats tilt-card">
-                    <div class="stat">
-                        <span class="stat-num">4+</span>
-                        <span class="stat-label">Years Exp.</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-num">13</span>
-                        <span class="stat-label">Clients</span>
-                    </div>
+                    <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Years Exp.</span></div>
+                    <div class="stat"><span class="stat-num">13</span><span class="stat-label">Clients</span></div>
                 </div>
-
                 <div class="glass-box bento-mobile tilt-card">
                     <i class="fas fa-mobile-screen box-icon"></i>
                     <h3>Mobile Dev</h3>
-                    <div class="tech-tags">
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>React Native</span>
-                        <span>Java</span>
-                        <span>Firebase</span>
-                    </div>
+                    <div class="tech-tags"><span>Flutter</span><span>React Native</span><span>Java</span></div>
                 </div>
-
                 <div class="glass-box bento-frontend tilt-card">
                     <i class="fas fa-code box-icon"></i>
                     <h3>Frontend Dev</h3>
-                    <div class="tech-tags">
-                        <span>HTML5</span>
-                        <span>CSS3 / Glassmorphism</span>
-                        <span>JavaScript</span>
-                        <span>Node.js</span>
-                    </div>
+                    <div class="tech-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
                 </div>
             </div>
         </section>
@@ -96,87 +255,61 @@
         <section id="work" class="section">
             <h2 class="section-heading">Selected Works</h2>
             <div class="projects-wrapper">
-                
                 <div class="glass-project-card reveal-up">
                     <div class="project-content">
                         <div class="project-type">Mobile Application</div>
                         <h3>Chore App Redesign</h3>
-                        <p>A complete overhaul of a mobile chore app featuring deep gamification to increase user interaction and retention rates.</p>
-                        <div class="tech-tags">
-                            <span>Flutter</span><span>Firebase</span><span>Figma</span>
-                        </div>
-                        <a href="#" class="btn-text">View Source <i class="fab fa-github"></i></a>
+                        <p>A complete overhaul of a mobile chore app featuring deep gamification.</p>
                     </div>
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chore App">
-                    </div>
+                    <div class="project-image"><img src="[https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80](https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80)" alt="App"></div>
                 </div>
-
-                <div class="glass-project-card reverse reveal-up">
-                    <div class="project-content">
-                        <div class="project-type">Web Platform</div>
-                        <h3>Cashbridge MFB</h3>
-                        <p>Frontend Development for Cashbridge MicroFinance Bank, delivering a secure, responsive, and seamless banking UI.</p>
-                        <div class="tech-tags">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <a href="www.cashbridgemfb.com" target="_blank" class="btn-text">Live Demo <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cashbridge">
-                    </div>
-                </div>
-                
-                <div class="glass-project-card reveal-up">
-                    <div class="project-content">
-                        <div class="project-type">Android Application</div>
-                        <h3>CyReport</h3>
-                        <p>An Android app that unanimously reports cybercrimes to multiple law enforcement agencies in Nigeria.</p>
-                        <div class="tech-tags">
-                            <span>Java</span><span>XML</span><span>Firebase</span>
-                        </div>
-                        <a href="#" class="btn-text">View Source <i class="fab fa-github"></i></a>
-                    </div>
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CyReport">
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="glass-box contact-wrapper reveal-up">
-                <div class="contact-info">
-                    <h2 class="section-heading" style="text-align: left;">Initiate Protocol.</h2>
-                    <p>Ready to build something extraordinary? Send me a message, and I'll respond within 24 hours.</p>
-                    <div class="direct-contact">
-                        <a href="mailto:Muhammadshuaibu03@gmail.com"><i class="fas fa-envelope"></i> muhammedshuaibu03@gmail.com</a>
-                        <p><i class="fas fa-map-marker-alt"></i> Lagos, Nigeria (Available Remote)</p>
-                    </div>
-                </div>
-                <form id="contactForm" class="glass-form">
-                    <div class="input-group">
-                        <input type="text" id="name" required placeholder="Name">
-                        <input type="email" id="email" required placeholder="Email">
-                    </div>
-                    <select id="subject" required>
-                        <option value="" disabled selected>Select Project Type</option>
-                        <option value="web">Web App</option>
-                        <option value="mobile">Mobile App</option>
-                        <option value="consulting">Consulting</option>
-                    </select>
-                    <textarea id="message" required placeholder="Tell me about your project..."></textarea>
-                    <button type="submit" class="btn-primary" style="width: 100%;">Send Transmission</button>
-                </form>
             </div>
         </section>
     </main>
 
-    <footer class="glass-footer">
-        <p>&copy; 2026 Muhammad Shuaibu. Crafted with <i class="fas fa-heart" style="color: var(--neon-purple);"></i> and Glassmorphism.</p>
-    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orb1 = document.querySelector('.orb-1');
+            const orb2 = document.querySelector('.orb-2');
+            
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+                orb1.style.transform = `translate(${x * 50}px, ${y * 50}px)`;
+                orb2.style.transform = `translate(-${x * 40}px, -${y * 40}px)`;
+            });
 
-    <script src="script.js"></script>
+            const tiltCards = document.querySelectorAll('.tilt-card');
+            tiltCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = ((y - centerY) / centerY) * -10;
+                    const rotateY = ((x - centerX) / centerX) * 10;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                    card.style.transition = 'transform 0.5s ease';
+                });
+                card.addEventListener('mouseenter', () => card.style.transition = 'none');
+            });
+
+            const revealElements = document.querySelectorAll('.reveal-up');
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                revealElements.forEach(element => {
+                    if (element.getBoundingClientRect().top < windowHeight - 100) {
+                        element.classList.add('active');
+                    }
+                });
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
 </body>
 </html>
